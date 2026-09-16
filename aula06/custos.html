@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Site top</title>
+    <style>
+       body {
+        background-color: gold;
+        color: purple;
+        font: normal 20pt arial;
+       }
+       div#minimo {
+        margin-top: 15pt;
+       }
+    </style>
+</head>
+<body>
+    <h3>Descubra quanto sobra do seu salário</h3>
+    <p>Por: <strong>Jorge Gabriel Modrow</strong></p>
+    <div id="salario"></div>
+    <div id="minimo"></div>
+    <script> 
+    var divida = window.prompt('Digite um custo fixo seu.')
+    var salario = Number(window.prompt('Digite o seu salário.'))
+    var custo = Number(window.prompt(`Digite o valor do seu ${divida}.`))
+    var texto = document.querySelector(`div#salario`)
+    var textoo = document.querySelector('div#minimo')
+    var resultado = salario - custo
+    texto.innerHTML = `De seu salário, descontando o ${divida.toLowerCase()}, sobra <strong>${resultado.toLocaleString('pt-BR', {style:'currency', currency: 'BRL'})}</strong>.`
+    resultado >= 1412 ? textoo.innerHTML = `Descontando o ${divida.toLowerCase()}, te sobra mais do que um salário mínimo por mês.` : textoo.innerHTML = `Vish, descontando o ${divida.toLowerCase()}, te sobra menos do que <strong>1</strong> salário mínimo por mês.`
+    </script>
+</body>
+</html>

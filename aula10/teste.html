@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cubos, cubos... e mais cubos!</title>
+    <style>
+        body {
+            background-color: gray;
+            font: bold 20pt arial
+        }
+        
+        div {
+            background: white;
+            height: 100px;
+            width: 200px;
+            color: black;
+            text-align: center;
+            line-height: 100px;
+        }
+        div#modrow {
+            margin-top: 20px
+        }
+    </style>
+</head>
+<body>
+    <div id="jorge">Jorge</div>
+    <div id="modrow">Modrow</div>
+
+    <script>
+        var mod = document.querySelector('div#modrow')
+        mod.addEventListener('mousemove', black)
+        mod.addEventListener('mousedown', click)
+        mod.addEventListener('mouseout', back)
+
+        var jor = document.querySelector('div#jorge')
+        jor.addEventListener('mousemove', preto)
+        jor.addEventListener('mouseout', voltou)
+
+        function preto() {
+            jor.style.background = 'black'
+            jor.style.color = 'white'
+        }
+        function voltou() {
+            jor.style.background = 'white'
+            jor.style.color = 'black'
+        }
+        function black() {
+            mod.style.background = 'black'
+            mod.style.color = 'white'
+        }
+        function back() {
+            mod.style.color = 'black'
+            mod.style.background = 'white'
+            mod.innerHTML = 'Modrow'
+        }
+        function click() {
+            mod.innerHTML = 'EITAAA'
+        }
+    </script>
+</body>
+</html>

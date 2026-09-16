@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>22/01/2024</title>
+    <style>
+        body{
+            background-color: gray;
+            color: black;
+            font: bold 20pt arial;
+        }
+        input#num1{
+            height: 40px;
+            width: 50px
+        }
+        input#num2{
+            height: 40px;
+            width: 50px
+        }
+        div#numero {
+            background-color:black;
+            color:white;
+            width: 200pt;
+            height: 200pt;
+            text-align: center;
+            line-height: 200pt;
+            margin-top: 20pt;
+        }
+        input#somar{
+            height: 40px;
+            width: 100px
+        }
+    </style>
+</head>
+<body>
+    <input type="number" name="num1" id="num1"> + <input type="number" name="num2" id="num2">
+    <input type="button" value="Somar" id="somar" onclick="somar()">
+    <div id="numero">Número</div>
+
+    <script>
+        var numero = document.querySelector('div#numero')
+        numero.addEventListener('click', click)
+        numero.addEventListener('mouseout', sair)
+
+        function somar(){
+            var nu1 = document.getElementById('num1')
+            var nu2 = document.querySelector('input#num2')
+            var n1 = Number(nu1.value)
+            var n2 = Number(nu2.value)
+            var s = n1 + n2
+            numero.style.background = 'white'
+            numero.innerHTML = s
+        }
+        function click() {
+            numero.style.color = 'black'
+        }
+        function sair() {
+            numero.innerHTML = `Número`
+            numero.style.background = 'black'
+            numero.style.color = 'white'
+        }
+    </script>
+</body>
+</html>

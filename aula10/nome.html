@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Nome composto</title>
+    <style>
+        body {
+            background-color: gray;
+            font: normal 18pt arial;
+        }
+        input#avancar {
+            width: 238pt;
+            height: 20pt;
+        }
+        input#nome {
+            width: 100pt;
+            height: 15pt;
+            margin-left: 12px;
+        }
+        input#sobrenome {
+            width: 100pt;
+            height: 15pt;
+            margin-left: 5px;
+        }
+        div#res {
+            margin-top: 10pt
+        }
+    </style>
+</head>
+<body>
+    <h2>Seu nome</h2>
+    <p>Esse <strong>incrível site</strong> irá te dizer seu nome!</p>
+    Primeiro nome <input type="text" name="nome" id="nome"> </br>
+    Segundo nome <input type="text" name="sobrenome" id="sobrenome"> </br>
+    <input type="button" value="Avançar" id="avancar" onclick="avancar()">
+    <div id="res"></div>
+    <script>
+        function avancar() {
+            var name = document.querySelector('input#nome')
+            var nome = name.value
+            var surname = document.querySelector('input#sobrenome')
+            var sobrenome = surname.value
+            var res = document.querySelector('div#res')
+
+            if (nome.length < 3) {
+                res.innerHTML = `Seu nome precisa ter mais de 2 caracteres!`
+                res.style.color = `red`
+            } else {
+                res.style.color = `black`
+                res.innerHTML = `O seu nome é <strong>${nome[0].toUpperCase() + nome.substring(1)} ${sobrenome[0].toUpperCase() + sobrenome.substring(1)}</strong>.`
+            }
+        }
+    </script>
+</body>
+</html>

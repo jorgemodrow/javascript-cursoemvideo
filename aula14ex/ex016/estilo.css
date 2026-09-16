@@ -1,0 +1,62 @@
+body {
+    background: rgb(232, 232, 232);
+    font: normal 15pt arial;
+}
+
+header {
+    width: 100%;
+    background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-image: linear-gradient(to right, black 0%,gray 100% );
+    text-align: center;
+}
+
+section {
+    background: white;
+    border-radius: 10px;
+    padding: 15px;
+    width: 500px;
+    margin: auto;
+    box-shadow: 3px 3px 10px rgba(0, 0, 0, 0.368);
+}
+
+input {
+    border-radius: 6px;
+    border-color: black;
+    border-width: 1pt;
+}
+input#inicio {
+    margin-left: 10px;
+}
+
+input#fim {
+    margin-left: 24px;
+}
+
+input#passo {
+    margin-left: 2px;
+}
+
+input#contar {
+    margin-top: 10px;
+    height: 30px;
+    width: 100px;
+    font-weight: 600;
+    background-color: green;
+    color: white;
+    border-color: white;
+}
+
+div {
+    margin-top: 10px;
+    font-weight: bold;
+}
+footer {
+    width: 100%;
+    background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-image: linear-gradient(to right, black 0%,gray 100% );
+    text-align: center;
+    text-align: center;
+    font-style: italic;
+}

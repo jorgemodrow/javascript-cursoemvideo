@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Nacionalidade</title>
+    <style>
+        body {
+            font: normal 15pt arial;
+        }
+        input {
+            height: 18pt;
+        }
+        h3 {
+            color:green
+        }
+    </style>
+</head>
+<body>
+    <h3>Descubra se você é hue hue BR!</h1>
+    Digite seu país: <input type="text" name="pais" id="pais">
+    <input type="button" value="Avançar" onclick="avancar()">
+    <div id="res"></div>
+
+    <script>
+        function avancar() {
+            var paiss = document.querySelector('input#pais')
+            var pais = paiss.value
+            var res = document.querySelector('div#res')
+            res.innerHTML = `<p>Seu país é <strong>${pais}</strong>.</p>`
+
+            if (pais != `Brasil`) {
+                res.innerHTML += `<p>Você é estrangeiro!</p>`
+            } else {
+                res.innerHTML += `<p>Você é brasileiro!</p>`
+            }
+        }
+    </script>
+</body>
+</html>

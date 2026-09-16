@@ -1,0 +1,60 @@
+body {
+    font: normal 15pt arial;
+    background-color: rgb(234, 234, 234);
+}
+
+header {
+    background: white;
+    margin-left: -8px;
+    margin-right: -5pt;
+    margin-top: -13px;
+}
+
+div#detran {
+    margin-left: 20pt;
+}
+
+div#linha {
+    font: bold 15pt arial;
+    background-color: white;
+    width: 500pt;
+    text-align: center;
+    height: 50pt;
+    line-height: 50pt;
+    margin-left: 7pt;
+    margin-top: 10pt;
+    border-radius: 5pt; /* borda arredondada */
+}
+
+input#ver {
+    background:rgb(82, 190, 40);
+    color: white;
+    height: 30pt;
+    width: 100pt;
+    font: bold 10pt arial;
+    border-radius: 5pt;
+    border: 0pt;
+    margin-left: 10pt
+}
+
+input#ver:hover {
+    background-color: green;
+}
+
+input#ver:active {
+    background-color: rgb(0, 90, 0)
+}
+
+div#res {
+    margin-left: 6pt;
+    margin-top: 10pt;
+}
+
+input#kmh {
+    border-width: thin;
+    border-style: solid;
+    border-color: black;
+    border-radius: 2pt;
+    height: 15pt;
+    width: 100pt;
+}
